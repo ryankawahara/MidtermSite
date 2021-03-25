@@ -25,12 +25,45 @@ html body{
 
 }
 
+a {
+  text-decoration: none;
+  color:#FFB600;
+
+}
+.titleSection{
+  width:75%;
+  /* background-color: pink; */
+  font-family:GilroyBold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+
+}
+
+.titleSection h1{
+margin:0;
+padding:0;
+font-size:80px;
+
+}
+
+.titleSection p{
+  margin:0;
+  padding:0;
+  font-size:25px;
+
+}
 .navMenu{
+  margin:0;
+  padding:0;
+  /* outline: 5px solid white; */
 
   /* margin-top: 5vw; */
 width:99%;
+
 display: grid;
-padding:10px;
+/* padding:5px; */
 grid-template-columns: 4fr 4fr 4fr 4fr 4fr 4fr 4fr;
 /* background-color: green; */
 
@@ -45,13 +78,15 @@ grid-template-columns: 4fr 4fr 4fr 4fr 4fr 4fr 4fr;
 
 }
 .box{
+  /* outline: 5px solid white; */
 
   margin-left: 0.25vw;
   margin-right: 0.25vw;
-  align-self:end;
+  /* margin-top: 40px; */
+  align-self:center;
   /* border: 1px solid white; */
   /* margin:10px; */
-  height:40px;
+  height:30px;
   padding:0;
   /* background-color:red; */
   display: flex;
@@ -60,11 +95,20 @@ grid-template-columns: 4fr 4fr 4fr 4fr 4fr 4fr 4fr;
   font-family: GilroyBold;
   color:#FFB600;
 }
+.box a {
+   color:#FFB600;
+
+  text-decoration: none; /* no underline */
+}
+.box a:hover{
+  text-decoration: underline;
+}
 
 .box img{
 /* object-fit:contain; */
-
-   width:360px;
+/* outline-color: 5px solid blue; */
+  padding-top: 0px;
+   width:200px;
    height:auto;
    margin:0;
    padding:0;
@@ -72,45 +116,24 @@ grid-template-columns: 4fr 4fr 4fr 4fr 4fr 4fr 4fr;
 
 
 }
-.box a {
-   color:#FFB600;
-
-  text-decoration: none; /* no underline */
-}
-
-.box a:hover{
-  text-decoration: underline;
-}
 
 #logo{
-
-margin-top: 50px;
+/* margin-top: 50px; */
   z-index: 0;
-  height:240px;
+  height:200px;
 transition-duration: 0.5s;
    /* glow adapted from https://codersblock.com/blog/creating-glow-effects-with-css/ */
 
-  /* background-color: red; */
   /* bottom:-250px; */
 }
-/* #logo img:hover{ cool effect but too distacting
-  border-radius:5px;
-  box-shadow:
-   0 0 30px 2px #fff,
-   0 0 50px 2px blue,
-   0 0 10px 2px #0ff; */
-   /* glow adapted from https://codersblock.com/blog/creating-glow-effects-with-css/ */
-
-/* } */
-
-/* .box img{
-  width:5px;
-  height:auto;
-} */
 
 
+#logo img:hover{
+  transition-duration: 0.0s;
 
+  border-bottom:5px solid #FFB600;
 
+}
 
 .summaryText{
   font-size: max(1.5vw, 20px);
@@ -280,23 +303,36 @@ border: 2px solid white; */
    0 0 10px 2px #0ff;
 }
 
+
 .bioSection{
   z-index: 2;
   margin-top: 25px;
   width:45%;
-  height:400px;
-  background: linear-gradient(to bottom,#FFB600 50%, black) fixed;
+  height:450px;
+  background: linear-gradient(to bottom,#FFB600 80%, black) fixed;
   display: grid;
   grid-template-columns: 10fr 14fr;
     min-width: 940px;
+    transition-duration: 0.5s;
+
 
 }
 
+
+.bioSection:hover{
+  border-radius:5px;
+  box-shadow:
+   0 0 30px 2px #fff,
+   0 0 50px 2px blue,
+   0 0 10px 2px #0ff; */
+   /* glow adapted from https://codersblock.com/blog/creating-glow-effects-with-css/ */
+
+ }
 .profilePic{
   min-width: 400px;
 
-  width:min(400px,30vw);
-  height:400px;
+  width:450px;
+  height:450px;
   /* background-color: magenta; */
   /* background-image: url("DavidHeadshotSquare.png"); */
   background-size: cover;
@@ -304,33 +340,88 @@ border: 2px solid white; */
 
 .profilePic img{
   min-width: 400px;
-  width:min(400px,30vw);
+  width:450px;
+  height:450px;
+  transition-duration: 0.5s;
+
 
 }
+
+/* .profilePic img:hover{
+  border-radius:5px;
+  box-shadow:
+   0 0 30px 2px #fff,
+   0 0 50px 2px blue,
+   0 0 10px 2px #0ff;  */
+   /* glow adapted from https://codersblock.com/blog/creating-glow-effects-with-css/ */
+
+ /* } */
 
 .bioText{
 
   /* background-color:red; */
   text-align: left;
   padding:15px;
-  color:white;
+  color:black;
 }
 
-.bioText p{
-  font-size:50px;
+.bioText h1{
+  text-decoration: underline;
+  font-size:40px;
+color:black;
+margin:0;
+padding:0;
+font-family: GilroyBold;
+line-height: 45px;
+}
 
+.bioText h2{
+  text-decoration: none;
+line-height: 45px;
+  font-size:40px;
+color:black;
 margin:0;
 padding:0;
 font-family: GilroyBold;
 }
 
-.bioText p+p{
+.bioText h3{
+  margin:0;
+  padding:0;
   font-size:25px;
   font-family: GilroyLight;
 }
 
-.bioText p+p+p{
+.bioText p{
   font-size:16px;
   font-family: GilroyLight;
 
+}
+
+.episodeLink{
+  text-align:center;
+}
+
+.linksSection{
+  width:65%;
+  /* border: 5px solid white; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonSection p, .buttonSection a {
+  transition-duration: 0.5s;
+
+   color:black;
+   font-family: GilroyLight;
+  text-decoration: none; /* no underline */
+  border-radius: 5px;
+border: 2px solid black;
+padding: 5px;
+font-size:19px;
+}
+
+.buttonSection p:hover, .buttonSection a:hover{
+  background-color: black;
+  color:#FFB600;
 }

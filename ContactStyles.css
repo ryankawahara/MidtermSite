@@ -25,11 +25,45 @@ html body{
 
 }
 
+a {
+  text-decoration: none;
+  color:#FFB600;
+
+}
+.titleSection{
+  width:75%;
+  /* background-color: pink; */
+  font-family:GilroyBold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+
+}
+
+.titleSection h1{
+margin:0;
+padding:0;
+font-size:80px;
+
+}
+
+.titleSection p{
+  margin:0;
+  padding:0;
+  font-size:25px;
+
+}
 .navMenu{
+  margin:0;
+  padding:0;
+  /* outline: 5px solid white; */
+
   /* margin-top: 5vw; */
 width:99%;
+
 display: grid;
-padding:10px;
+/* padding:5px; */
 grid-template-columns: 4fr 4fr 4fr 4fr 4fr 4fr 4fr;
 /* background-color: green; */
 
@@ -44,12 +78,15 @@ grid-template-columns: 4fr 4fr 4fr 4fr 4fr 4fr 4fr;
 
 }
 .box{
+  /* outline: 5px solid white; */
+
   margin-left: 0.25vw;
   margin-right: 0.25vw;
-  align-self:end;
+  /* margin-top: 40px; */
+  align-self:center;
   /* border: 1px solid white; */
   /* margin:10px; */
-  height:40px;
+  height:30px;
   padding:0;
   /* background-color:red; */
   display: flex;
@@ -57,33 +94,37 @@ grid-template-columns: 4fr 4fr 4fr 4fr 4fr 4fr 4fr;
   align-items: center;
   font-family: GilroyBold;
   color:#FFB600;
-
-
-}
-.box a:hover{
-  text-decoration: underline;
-}
-
-
-/* .box p:hover{
-  text-decoration: underline;
-
-} */
-
-.box img{
-/* object-fit:contain; */
-
-   width:360px;
-   height:auto;
-   margin:0;
-   padding:0;
-   transition-duration: 0.5s;
-
 }
 .box a {
    color:#FFB600;
 
   text-decoration: none; /* no underline */
+}
+.box a:hover{
+  text-decoration: underline;
+}
+
+.box img{
+/* object-fit:contain; */
+/* outline-color: 5px solid blue; */
+  padding-top: 0px;
+   width:200px;
+   height:auto;
+   margin:0;
+   padding:0;
+   transition-duration: 0.5s;
+
+
+}
+
+#logo{
+/* margin-top: 50px; */
+  z-index: 0;
+  height:200px;
+transition-duration: 0.5s;
+   /* glow adapted from https://codersblock.com/blog/creating-glow-effects-with-css/ */
+
+  /* bottom:-250px; */
 }
 .animatedButton a{
   text-decoration: none; /* no underline */
@@ -112,17 +153,7 @@ text-align:   center;
    0 0 50px 2px blue,
    0 0 10px 2px #0ff;
 }
-#logo{
-/* background-color: green; */
-margin-top: 50px;
-  z-index: 0;
-  height:240px;
-transition-duration: 0.5s;
-   /* glow adapted from https://codersblock.com/blog/creating-glow-effects-with-css/ */
 
-  /* background-color: red; */
-  /* bottom:-250px; */
-}
 /* #logo img:hover{ cool effect but too distacting
   border-radius:5px;
   box-shadow:
@@ -247,7 +278,7 @@ justify-content: center;
 
 .episodesButton{
   position:absolute;
-  top:min(1690px,1720px);
+  top:1690px;
   /* background-color:blue; */
 }
 
@@ -308,6 +339,13 @@ border: 2px solid white; */
    0 0 30px 2px #fff,
    0 0 50px 2px blue,
    0 0 10px 2px #0ff;
+}
+
+#logo img:hover{
+  transition-duration: 0.0s;
+
+  border-bottom:5px solid #FFB600;
+
 }
 
 .bioSection{

@@ -12,10 +12,12 @@ html body{
   margin: 0;
   padding:0;
   background-color:#111127;
-  height:2500px;
+  /* height:2500px; */
   color:#FFB600;
 
 }
+
+
 
 .fullPage{
   display: flex;
@@ -25,6 +27,11 @@ html body{
 
 }
 
+a {
+  text-decoration: none;
+  color:#FFB600;
+
+}
 .titleSection{
   width:75%;
   /* background-color: pink; */
@@ -36,14 +43,16 @@ html body{
 
 }
 
-.titleSection p{
+.titleSection h1{
 margin:0;
 padding:0;
 font-size:80px;
 
 }
 
-.titleSection p+p{
+.titleSection p{
+  margin:0;
+  padding:0;
   font-size:25px;
 
 }
@@ -97,6 +106,7 @@ grid-template-columns: 4fr 4fr 4fr 4fr 4fr 4fr 4fr;
   text-decoration: underline;
 }
 
+
 .box img{
 /* object-fit:contain; */
 /* outline-color: 5px solid blue; */
@@ -114,10 +124,16 @@ grid-template-columns: 4fr 4fr 4fr 4fr 4fr 4fr 4fr;
 /* margin-top: 50px; */
   z-index: 0;
   height:200px;
-transition-duration: 0.5s;
+transition-duration: 0.0s;
    /* glow adapted from https://codersblock.com/blog/creating-glow-effects-with-css/ */
 
   /* bottom:-250px; */
+}
+#logo img:hover{
+  transition-duration: 0.0s;
+
+  border-bottom:5px solid #FFB600;
+
 }
 /* #logo img:hover{
   border-radius:5px;
@@ -132,21 +148,23 @@ transition-duration: 0.5s;
 .backgroundLaser{
   align-self:center;
 
-top:-45px;
+top:-135px;
   /* right:1px; */
   /* left:15px; */
   position:absolute;
   z-index: -2;
 }
 .heroImage{
+  /* outline: 5px solid white; */
+
   position: relative;
   /* background-image:url("backgroundLaser.png");
   background-size:contain;
   background-repeat: no-repeat;
   background-position: center; */
-  margin-top: 5px;
+  /* margin-top: -5px; */
   width:75%;
-  height:400px;
+  height:280px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -155,6 +173,7 @@ top:-45px;
 }
 
 .heroText{
+  /* outline: 5px solid white; */
   color:#FFB600;
 
   font-size: 45px;
@@ -162,15 +181,21 @@ top:-45px;
   align-items: center;
 
   font-family: GilroyBold;
-  height:100px;
+  height:105px;
+  /* border: 1px solid white; */
 
   /* background-color: red; */
 }
 
 #textLeft{
+    /* height:75px; */
+  align-items: flex-end;
   font-family: GilroyLight;
 
-  margin-left: 25%;
+  /* margin-right: 25%; */
+  /* margin-right:30%; */
+  align-self: center;
+
 }
 
 #textMiddle{
@@ -188,14 +213,15 @@ top:-45px;
 #textRight{
   font-family: GilroyLight;
 
-    margin-right: 15%;
-  align-self: flex-end;
+  /* margin-left:30%; */
+text-align: center;
+  align-self: center;
 }
 
 .summaryText{
   font-size: max(1.5vw, 20px);
   display: inline;
-  margin-top: 2vw;
+  margin-top: 35px;
   height:55px;
   width:50%;
   /* background-color:red; */
@@ -226,7 +252,7 @@ width:75%;
 
 .audioTrailer{
     /* border: 4px solid white; */
-  margin-top: 2vw;
+  margin-top: 55px;
 
   display: flex;
   flex-direction: column;
@@ -236,7 +262,7 @@ width:75%;
 
 .trailerPlayer{
   /* align-self: center; */
-  margin-top: 50px;
+  margin-top: 35px;
     /* border: 4px solid white; */
 }
 
@@ -256,7 +282,7 @@ width:75%;
 .podcastIconHolder{
     /* border: 4px solid white; */
   /* border: 4px solid blue; */
-
+margin-top: 45px;
 /* align-self: center; */
 display: flex;
 flex-direction: column;
@@ -413,7 +439,7 @@ position: relative;
 
 .episodesButton{
   position:absolute;
-  top:1665px;
+  top:1560px;
   /* background-color:blue; */
 }
 
