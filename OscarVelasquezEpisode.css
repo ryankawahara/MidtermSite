@@ -14,7 +14,7 @@ html body{
   margin: 0;
   padding:0;
   background-color:#111127;
-  height:1500px;
+  /* height:1500px; */
 }
 
 .fullPage{
@@ -419,14 +419,29 @@ border: 2px solid white; */
 
 }
 
+.bioSectionPart2{
+  z-index: 2;
+  margin-top: 25px;
+  width:45%;
+  height:350px;
+  /* background: linear-gradient(to bottom,#FFB600 80%, black) fixed; */
+  display: grid;
+  grid-template-columns: 10fr 10fr;
+
+    min-width: 940px;
+    transition-duration: 0.5s;
+
+}
 
 
-.activeEpisode:hover{
+
+
+.activeEpisode{
   border-radius:5px;
   box-shadow:
    0 0 30px 2px #fff,
    0 0 50px 2px blue,
-   0 0 10px 2px #0ff; */
+   0 0 10px 2px #0ff;
    /* glow adapted from https://codersblock.com/blog/creating-glow-effects-with-css/ */
 
  }
@@ -470,7 +485,7 @@ border: 2px solid white; */
   color:black;
 }
 
-.bioText h1{
+.bioText h1 {
   text-decoration: underline;
   font-size:40px;
 color:black;
@@ -480,7 +495,17 @@ font-family: GilroyBold;
 line-height: 45px;
 }
 
-.bioText h2{
+.titlesSegment h1 {
+  text-decoration: underline;
+  font-size:40px;
+color:black;
+margin:0;
+padding:0;
+font-family: GilroyBold;
+line-height: 45px;
+}
+
+.bioText h2 ,.titlesSegment h2{
   text-decoration: none;
 line-height: 45px;
   font-size:40px;
@@ -493,7 +518,8 @@ font-family: GilroyBold;
 #noBorder{
   border:none;
 }
-.bioText h3{
+.bioText h3, .titlesSegment h3{
+  /* display: inline; */
   color:black;
   margin:0;
   padding:0;
@@ -501,10 +527,16 @@ font-family: GilroyBold;
   font-family: GilroyLight;
 }
 
-.bioText p{
+.bioText p {
   font-size:16px;
   font-family: GilroyLight;
 
+}
+
+.titlesSegment li, .titlesSegment p {
+  font-size:18px;
+  font-family: GilroyLight;
+}
 }
 
 .episodeLink{
@@ -518,14 +550,81 @@ margin-top: 30px;
 }
 
 .viewEpisode{
+  margin-top: 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .viewEpisode a{
   margin:0;
-  padding-left:60px;
-  padding-right:60px;
+  padding-left:90px;
+  padding-right:90px;
 /* background-color:blue; */
   /* width:600px; */
+}
+
+.showNotesSection{
+
+  padding:15px;
+  background: linear-gradient(to bottom,#FFB600 80%, black) fixed;
+
+  margin-right: 5px;
+
+}
+
+.creditsSection{
+  background: linear-gradient(to bottom,#FFB600 80%, black) fixed;
+
+margin-left: 5px;
+  padding:15px;
+
+  /* background-color:red; */
+
+}
+
+.titlesSegment {
+  list-style-position: outside;
+}
+
+.titlesSegment a{
+color:black;
+text-decoration: underline;
+transition-duration: 0.5s;
+
+}
+
+.titlesSegment a:hover{
+  font-family:GilroyBold;
+}
+
+.titlesSegment li{
+  margin-top:15px;
+}
+
+.subBullet ul{
+  list-style-type:circle;
+
+}
+.subBullet li{
+  margin-left:10px;
+}
+
+/* learned list styling here: https://www.computerhope.com/issues/ch001703.htm */
+.titlesSegment h4{
+  color:black;
+  margin:0;
+  padding:0;
+  font-size:25px;
+  font-family: GilroyBold;
+  /* display: inline; */
+}
+
+#bioLink {
+  text-decoration: none;
+  transition-duration: 0.5s;
+}
+
+#bioLink:hover {
+ text-decoration: underline;
+
 }

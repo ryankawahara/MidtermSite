@@ -68,7 +68,8 @@ grid-template-columns: 4fr 4fr 4fr 4fr 4fr 4fr 4fr;
 /* background-color: green; */
 
   /* padding: 5vw; */
-  font-size: max(2vw, 25px);
+  font-size: 40px;
+
   /* from https://css-tricks.com/how-do-you-do-max-font-size-in-css/ */
 }
 
@@ -117,15 +118,69 @@ grid-template-columns: 4fr 4fr 4fr 4fr 4fr 4fr 4fr;
 
 }
 
+.box img{
+/* object-fit:contain; */
+/* outline-color: 5px solid blue; */
+  padding-top: 0px;
+   width:200px;
+   height:auto;
+   margin:0;
+   padding:0;
+   transition-duration: 0.5s;
+
+
+}
+#logoHeight{
+  height:200px;
+  /* background-color: pink; */
+  padding-right: 25px;
+
+}
+
+#logo img:hover{
+  opacity: 1.0;
+  /* transition-duration: 0.0s; */
+
+  /* border-bottom:5px solid #FFB600; */
+
+}
+
+#logo img{
+  width:250px;
+  height:auto;
+  opacity: 0;
+  transition-duration: 0.2s;
+  /* margin-right:50px; */
+
+
+}
 #logo{
 /* margin-top: 50px; */
-  z-index: 0;
-  height:200px;
-transition-duration: 0.5s;
+/* position:relative; */
+  z-index: 2;
+  /* height:200px; */
+transition-duration: 0.2s;
+position: absolute;
+
    /* glow adapted from https://codersblock.com/blog/creating-glow-effects-with-css/ */
 
   /* bottom:-250px; */
 }
+.noGlow{
+  /* background-color: pink; */
+  opacity: 1.0;
+  position: relative;
+}
+.noGlow img{
+  opacity: 1.0;
+  width:250px;
+  height:auto;
+  /* margin-right:50px; */
+}
+.noGlow img:hover{
+  opacity: 1.0;
+}
+
 .animatedButton a{
   text-decoration: none; /* no underline */
 
@@ -173,17 +228,6 @@ text-align:   center;
 
 
 
-.summaryText{
-  font-size: max(1.5vw, 20px);
-  display: inline;
-  margin-top: 2vw;
-  height:55px;
-  width:50%;
-  /* background-color:red; */
-  font-family: GilroyLight;
-  color:#FFB600;
-
-}
 .normalText{
   display: inline;
   font-family: GilroyLight;
@@ -195,14 +239,7 @@ text-align:   center;
   display: inline;
 }
 
-.audioTrailer{
-  margin-top: 2vw;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* background-color:magenta; */
-}
 
 .trailerPlayer{
   margin-top: 20px;
@@ -341,12 +378,7 @@ border: 2px solid white; */
    0 0 10px 2px #0ff;
 }
 
-#logo img:hover{
-  transition-duration: 0.0s;
 
-  border-bottom:5px solid #FFB600;
-
-}
 
 .bioSection{
   z-index: 2;

@@ -68,7 +68,7 @@ grid-template-columns: 4fr 4fr 4fr 4fr 4fr 4fr 4fr;
 /* background-color: green; */
 
   /* padding: 5vw; */
-  font-size: max(2vw, 25px);
+  font-size: 40px;
   /* from https://css-tricks.com/how-do-you-do-max-font-size-in-css/ */
 }
 
@@ -117,15 +117,76 @@ grid-template-columns: 4fr 4fr 4fr 4fr 4fr 4fr 4fr;
 
 }
 
+.box a:hover{
+  text-decoration: underline;
+}
+
+
+.box img{
+/* object-fit:contain; */
+/* outline-color: 5px solid blue; */
+  padding-top: 0px;
+   width:200px;
+   height:auto;
+   margin:0;
+   padding:0;
+   transition-duration: 0.5s;
+
+
+}
+#logoHeight{
+  height:200px;
+  /* background-color: pink; */
+  padding-right: 25px;
+
+}
+
+#logo img:hover{
+  opacity: 1.0;
+  /* transition-duration: 0.0s; */
+
+  /* border-bottom:5px solid #FFB600; */
+
+}
+
+#logo img{
+  width:250px;
+  height:auto;
+  opacity: 0;
+  transition-duration: 0.2s;
+  /* margin-right:50px; */
+
+
+}
 #logo{
 /* margin-top: 50px; */
-  z-index: 0;
-  height:200px;
-transition-duration: 0.5s;
-border-bottom:5px solid #FFB600;
+/* position:relative; */
+  z-index: 2;
+  /* height:200px; */
+transition-duration: 0.2s;
+position: absolute;
+
    /* glow adapted from https://codersblock.com/blog/creating-glow-effects-with-css/ */
 
   /* bottom:-250px; */
+}
+.noGlow{
+  /* background-color: pink; */
+  opacity: 1.0;
+  position: relative;
+
+}
+.noGlow img{
+  opacity: 1.0;
+  width:250px;
+  height:auto;
+  /* margin-right:50px; */
+}
+.noGlow img:hover{
+  opacity: 1.0;
+
+
+
 }
 
 .linksSection{
@@ -351,12 +412,12 @@ border: 2px solid white; */
 
 }
 
-.bioSection:hover{
+.bioSection{
   border-radius:5px;
   box-shadow:
    0 0 30px 2px #fff,
    0 0 50px 2px blue,
-   0 0 10px 2px #0ff; */
+   0 0 10px 2px #0ff;
    /* glow adapted from https://codersblock.com/blog/creating-glow-effects-with-css/ */
 
  }
@@ -395,6 +456,42 @@ border: 2px solid white; */
   text-align: left;
   padding:15px;
   color:black;
+}
+
+.hoverEffects {
+  display: inline;
+  position: relative;
+}
+
+.hoverEffects h3{
+  display: inline;
+  position: relative;
+
+
+}
+
+.showPic{
+  position: absolute;
+  left: 226.5px;
+  display: inline;
+  /* background-color:rgba(255,255,255,0.5); */
+  opacity: 0;
+  transition-duration: 0.25s;
+
+}
+.showPic:hover{
+  opacity:1;
+}
+
+.showPic img{
+  position:absolute;
+  width:150px;
+  height:auto;
+  right:25px;
+  top:-35px;
+  z-index: -1;
+  /* background-color:pink; */
+
 }
 
 .highlight{
